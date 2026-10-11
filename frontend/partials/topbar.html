@@ -1,0 +1,43 @@
+<header class="topbar">
+  <div class="flex items-center gap-2 min-w-0">
+    <button type="button" class="btn btn-ghost btn-icon only-mobile" data-open-nav aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu" data-size="20"></i></button>
+    <nav class="breadcrumbs" id="breadcrumbs" aria-label="Breadcrumb"></nav>
+  </div>
+
+  <div class="flex items-center gap-1 sm:gap-2">
+    <form id="global-search" class="md-up relative" role="search" style="width:260px">
+      <label for="global-search-input" class="sr-only">Search</label>
+      <span class="input-icon-glyph"><i data-icon="search" data-size="16"></i></span>
+      <input id="global-search-input" type="search" class="input input-icon" style="min-height:38px;padding-top:6px;padding-bottom:6px;font-size:14px" placeholder="Search" autocomplete="off" />
+    </form>
+    <a id="search-shortcut" href="doctors.html" class="btn btn-ghost btn-icon md-down" aria-label="Search"><i data-icon="search" data-size="20"></i></a>
+
+    <div class="relative" id="notif-root">
+      <button type="button" class="btn btn-ghost btn-icon relative" id="notif-btn" aria-label="Notifications" aria-haspopup="true" aria-expanded="false">
+        <i data-icon="bell" data-size="20"></i>
+        <span class="dot-badge hidden" id="notif-count">0</span>
+      </button>
+      <div class="popover hidden" id="notif-pop" role="region" aria-label="Recent notifications">
+        <div class="card-head" style="padding:12px 16px"><h2 style="font-size:15px">Notifications</h2><a href="notifications.html" class="link text-sm">View all</a></div>
+        <div id="notif-list" style="max-height:380px;overflow-y:auto"></div>
+      </div>
+    </div>
+
+    <div class="relative" id="user-root">
+      <button type="button" class="flex items-center gap-2 rounded-control" id="user-btn" aria-haspopup="true" aria-expanded="false" style="background:none;border:0;cursor:pointer;padding:4px;min-height:44px">
+        <span class="avatar avatar-sm" data-user-initial>?</span>
+        <span class="md-up text-left leading-tight">
+          <span class="block text-sm font-semibold" data-user-name>—</span>
+          <span class="block text-xs text-muted" data-user-role-label>—</span>
+        </span>
+        <i data-icon="chevron-down" data-size="16" class="text-faint md-up"></i>
+      </button>
+      <div class="popover hidden" id="user-pop" style="width:220px" role="menu">
+        <a href="profile.html" class="menu-item" role="menuitem"><i data-icon="user-round" data-size="18"></i>Profile &amp; settings</a>
+        <a href="notifications.html" class="menu-item" role="menuitem"><i data-icon="bell" data-size="18"></i>Notifications</a>
+        <hr class="divider" />
+        <button type="button" class="menu-item" role="menuitem" data-logout style="color:var(--danger)"><i data-icon="log-out" data-size="18"></i>Log out</button>
+      </div>
+    </div>
+  </div>
+</header>

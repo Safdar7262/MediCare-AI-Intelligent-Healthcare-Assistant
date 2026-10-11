@@ -1,0 +1,57 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: healthcare-chatbot-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/medicare_ai
+    username: postgres
+    password: safdar
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ss
+    time-zone: UTC
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  jwt:
+    secret: change-this-to-a-long-random-secret-in-production-env-var-which-is-long-enough-for-jwt
+    expiration-ms: 86400000
+
+  cors:
+    allowed-origins: http://localhost:5500,http://127.0.0.1:5500,http://127.0.0.1:5501,http://localhost:5501
+
+  file:
+    upload-dir: ./uploads/reports
+
+  ai:
+    provider: gemini
+
+    openai:
+      api-key: your-openai-api-key-here
+      model: gpt-4o-mini
+
+    gemini:
+      api-key: YOUR_GEMINI_API_KEY
+      model: gemini-1.5-flash
+
+logging:
+  level:
+    root: INFO
+    com.medicareai: DEBUG

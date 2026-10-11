@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patients – MediCare AI</title>
+<meta name="description" content="MediCare AI — find a doctor, book appointments and ask general health questions in one place." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="shell">
+  <div id="sidebar-container"></div>
+  <div class="shell-main">
+    <div id="topbar-container"></div>
+    <main id="main" class="page">
+
+      <div class="page-head">
+        <div><h1 class="page-title">Patients</h1><p class="page-sub">Search patient records and open their reports.</p></div>
+        <button type="button" id="add-patient-btn" class="btn btn-primary"><i data-icon="user-plus" data-size="18"></i>Add patient</button>
+      </div>
+      <section class="card">
+        <div class="card-pad" style="padding-bottom:16px">
+          <div class="relative" style="max-width:360px"><span class="input-icon-glyph"><i data-icon="search" data-size="16"></i></span>
+            <label for="patient-search" class="sr-only">Search patients</label>
+            <input id="patient-search" type="search" class="input input-icon" placeholder="Search by name or condition" autocomplete="off" /></div>
+        </div>
+        <hr class="divider" />
+        <div id="patients-list" aria-busy="true"></div>
+        <div id="patients-pager"></div>
+      </section>
+       <br>
+
+          <footer
+            class="px-4 md:px-6 py-10"
+            style="background: var(--ink); color: #c7d5dc "
+          >
+            <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
+              <div>
+                <a
+                  href="landing.html"
+                  class="brand-mark"
+                  style="color: #fff; margin-bottom: 10px"
+                  ><span class="brand-glyph"
+                    ><i data-icon="heart-pulse" data-size="18"></i></span
+                  >MediCare AI</a
+                >
+                <p class="text-sm" style="margin: 10px 0 0; max-width: 34ch">
+                  Doctors, appointments and general health guidance in one
+                  place.
+                </p>
+              </div>
+              <nav aria-label="Footer">
+                <p
+                  class="text-sm font-bold"
+                  style="color: #fff; margin: 0 0 10px"
+                >
+                  Explore
+                </p>
+                <ul
+                  class="grid gap-2 text-sm"
+                  style="list-style: none; padding: 0; margin: 0"
+                >
+                  <li>
+                    <a href="landing.html#how" class="hover:underline"
+                      >How it works</a
+                    >
+                  </li>
+                  <li>
+                    <a href="login.html" class="hover:underline">Log in</a>
+                  </li>
+                  <li>
+                    <a href="register.html" class="hover:underline"
+                      >Create account</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div>
+                <p
+                  class="text-sm font-bold"
+                  style="color: #fff; margin: 0 0 10px"
+                >
+                  Contact
+                </p>
+                <ul
+                  class="grid gap-2 text-sm"
+                  style="list-style: none; padding: 0; margin: 0"
+                >
+                  <li class="flex items-center gap-2">
+                    <i data-icon="mail" data-size="16"></i
+                    >support@medicareai.com
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-icon="phone" data-size="16"></i>+1 (800) 555-0142
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p
+              class="text-xs max-w-6xl mx-auto"
+              style="
+                margin: 28px auto 0;
+                padding-top: 18px;
+                border-top: 1px solid #2a4656;
+                color: #9db2bd;
+              "
+            >
+              © 2026 MediCare AI. General information only; not medical advice.
+            </p>
+          </footer>
+    </main>
+  </div>
+</div>
+
+<script src="../js/icons.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/components.js"></script>
+<script src="../js/patients.js"></script>
+<script>initPatientsPage();</script>
+</body>
+</html>

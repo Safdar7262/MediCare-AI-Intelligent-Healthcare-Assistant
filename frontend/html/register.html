@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Create account – MediCare AI</title>
+<meta name="description" content="MediCare AI — find a doctor, book appointments and ask general health questions in one place." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="main" class="min-h-screen" style="display:grid;grid-template-columns:minmax(0,1fr)">
+  <style>@media(min-width:768px){#main{grid-template-columns:minmax(0,5fr) minmax(0,6fr)!important}}</style>
+  <aside class="md-up" style="background:var(--brand-800,#0A4C52);background:#0A4C52;color:#fff;padding:40px;display:flex;flex-direction:column;justify-content:space-between">
+    <a href="landing.html" class="brand-mark" style="color:#fff"><span class="brand-glyph" style="background:#fff;color:#0A4C52"><i data-icon="heart-pulse" data-size="18"></i></span>MediCare AI</a>
+    <div style="max-width:440px">
+      <h2 class="font-display" style="font-size:34px;line-height:1.15;margin:0 0 18px">Create your account in a minute.</h2>
+      <p style="margin:0 0 28px;color:#BFDCDE;font-size:16px">One account for booking appointments, keeping records and asking the assistant general questions.</p>
+      <ul style="list-style:none;padding:0;margin:0;display:grid;gap:16px">
+        <li class="flex gap-3"><i data-icon="stethoscope" data-size="20"></i><span>Find a doctor by specialty and see when they are available.</span></li>
+        <li class="flex gap-3"><i data-icon="calendar-check" data-size="20"></i><span>Book, reschedule or cancel appointments in a few taps.</span></li>
+        <li class="flex gap-3"><i data-icon="file-text" data-size="20"></i><span>Keep your reports and records in one private place.</span></li>
+      </ul>
+    </div>
+    <p style="margin:0;font-size:13px;color:#9CC6C9">MediCare AI gives general information only. In an emergency, call 112.</p>
+  </aside>
+  <section class="flex items-center justify-center p-6 md:p-10" style="background:var(--surface)">
+    <div class="w-full" style="max-width:420px">
+      <a href="landing.html" class="brand-mark md-down" style="margin-bottom:28px"><span class="brand-glyph"><i data-icon="heart-pulse" data-size="18"></i></span>MediCare <span style="color:var(--brand)">AI</span></a>
+      <h1 class="page-title" style="margin-bottom:6px">Create your account</h1>
+      <p class="page-sub" style="margin-bottom:26px">It takes about a minute. You can add health details later from your profile.</p>
+
+      <form id="register-form" class="grid gap-4" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input class="input" id="fullName" name="fullName" required autocomplete="name" placeholder="As it appears on your ID" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" id="email" type="email" name="email" required autocomplete="email" placeholder="name@example.com" />
+        </div>
+        <div class="field">
+          <label for="phoneNumber">Phone number <span class="opt">(optional)</span></label>
+          <input class="input" id="phoneNumber" name="phoneNumber" type="tel" autocomplete="tel" placeholder="+91 98765 43210" />
+        </div>
+        <div class="field">
+          <label for="role">I am registering as</label>
+          <select class="input" id="role" name="role">
+            <option value="PATIENT">A patient</option>
+            <option value="DOCTOR">A doctor</option>
+          </select>
+        </div>
+        <div class="field">
+  <label for="password">Password</label>
+  <div class="input-wrap">
+    <input class="input" id="password" type="password" name="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters" />
+    <button type="button" class="btn btn-ghost btn-icon toggle" data-toggle-password aria-label="Show password" aria-pressed="false"><i data-icon="eye" data-size="18"></i></button>
+  </div>
+  
+</div>
+        <div class="field">
+  <label for="confirmPassword">Confirm password</label>
+  <div class="input-wrap">
+    <input class="input" id="confirmPassword" type="password" name="confirmPassword" required autocomplete="new-password" placeholder="Re-enter your password" />
+    <button type="button" class="btn btn-ghost btn-icon toggle" data-toggle-password aria-label="Show password" aria-pressed="false"><i data-icon="eye" data-size="18"></i></button>
+  </div>
+  
+</div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Create account</button>
+      </form>
+
+      <p class="text-sm text-muted" style="margin-top:28px;text-align:center">Already have an account? <a href="login.html" class="link">Log in</a></p>
+    </div>
+  </section>
+</div>
+<script src="../js/icons.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/components.js"></script>
+<script src="../js/auth.js"></script>
+<script>initRegisterForm();</script>
+</body>
+</html>

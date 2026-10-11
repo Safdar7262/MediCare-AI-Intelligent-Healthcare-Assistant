@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile & settings – MediCare AI</title>
+<meta name="description" content="MediCare AI — find a doctor, book appointments and ask general health questions in one place." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="shell">
+  <div id="sidebar-container"></div>
+  <div class="shell-main">
+    <div id="topbar-container"></div>
+    <main id="main" class="page">
+
+      <div class="page-head"><div><h1 class="page-title">Profile &amp; settings</h1><p class="page-sub">Manage your account details and password.</p></div></div>
+      <div style="max-width:760px" class="grid gap-5">
+        <section class="card card-pad flex items-center gap-4" aria-label="Account">
+          <span class="avatar avatar-lg" id="profile-initial">?</span>
+          <div class="min-w-0"><p class="text-lg font-bold" id="profile-name" style="margin:0">—</p>
+            <p class="text-muted" id="profile-email" style="margin:0;overflow-wrap:anywhere">—</p>
+            <span class="badge badge-brand" id="profile-role-badge" style="margin-top:6px">—</span></div>
+        </section>
+
+        <section class="card hidden" id="patient-card" aria-labelledby="ph">
+          <div class="card-head"><h2 id="ph">Health details</h2></div>
+          <form id="patient-form" class="card-pad grid gap-4" novalidate>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="field"><label for="bloodGroup">Blood group <span class="opt">(optional)</span></label><input class="input" id="bloodGroup" name="bloodGroup" placeholder="e.g. O+" maxlength="5" /></div>
+              <div class="field"><label for="emergencyContact">Emergency contact <span class="opt">(optional)</span></label><input class="input" id="emergencyContact" name="emergencyContact" type="tel" placeholder="Name and phone number" /></div>
+            </div>
+            <div class="field"><label for="address">Address <span class="opt">(optional)</span></label><input class="input" id="address" name="address" autocomplete="street-address" /></div>
+            <div class="field"><label for="currentDisease">Current condition <span class="opt">(optional)</span></label><input class="input" id="currentDisease" name="currentDisease" placeholder="Shared with your doctors" /></div>
+            <div><button type="submit" class="btn btn-primary">Save changes</button></div>
+          </form>
+        </section>
+
+        <section class="card hidden" id="doctor-card" aria-labelledby="dh">
+          <div class="card-head"><h2 id="dh">Professional profile</h2></div>
+          <form id="doctor-form" class="card-pad grid gap-4" novalidate>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="field"><label for="specialization">Specialization</label><input class="input" id="specialization" name="specialization" required /></div>
+              <div class="field"><label for="qualification">Qualification</label><input class="input" id="qualification" name="qualification" /></div>
+              <div class="field"><label for="experienceYears">Experience (years)</label><input class="input" id="experienceYears" type="number" name="experienceYears" min="0" /></div>
+              <div class="field"><label for="consultationFee">Consultation fee (₹)</label><input class="input" id="consultationFee" type="number" name="consultationFee" min="0" step="0.01" /></div>
+            </div>
+            <fieldset style="border:0;padding:0;margin:0" class="grid gap-4">
+              <legend class="label" style="padding:0">Availability shown to patients when booking</legend>
+              <div class="field"><label for="availableDays">Working days</label><input class="input" id="availableDays" name="availableDays" placeholder="MON,TUE,WED,THU,FRI" /><p class="field-hint">Day codes like MON,WED,FRI or a range like Mon–Fri.</p></div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="field"><label for="availableFrom">From</label><input class="input" id="availableFrom" type="time" name="availableFrom" /></div>
+                <div class="field"><label for="availableTo">Until</label><input class="input" id="availableTo" type="time" name="availableTo" /></div>
+              </div>
+            </fieldset>
+            <div class="field"><label for="bio">About you <span class="opt">(optional)</span></label><textarea class="input" id="bio" name="bio"></textarea></div>
+            <div class="field"><label for="profileImageUrl">Photo link <span class="opt">(optional)</span></label><input class="input" id="profileImageUrl" name="profileImageUrl" type="url" placeholder="https://…" /><p class="field-hint">A web address of your professional photo. Initials are shown if empty.</p></div>
+            <div><button type="submit" class="btn btn-primary">Save changes</button></div>
+          </form>
+        </section>
+
+        <section class="card" aria-labelledby="pwh">
+          <div class="card-head"><h2 id="pwh">Change password</h2></div>
+          <form id="password-form" class="card-pad grid gap-4" novalidate>
+            <div class="field"><label for="currentPassword">Current password</label><div class="input-wrap"><input class="input" id="currentPassword" type="password" name="currentPassword" required autocomplete="current-password" /><button type="button" class="btn btn-ghost btn-icon toggle" data-toggle-password aria-label="Show password" aria-pressed="false"><i data-icon="eye" data-size="18"></i></button></div></div>
+            <div class="field"><label for="newPassword">New password</label><div class="input-wrap"><input class="input" id="newPassword" type="password" name="newPassword" required minlength="8" autocomplete="new-password" /><button type="button" class="btn btn-ghost btn-icon toggle" data-toggle-password aria-label="Show password" aria-pressed="false"><i data-icon="eye" data-size="18"></i></button></div><p class="field-hint">At least 8 characters.</p></div>
+            <div class="field"><label for="confirmPassword">Confirm new password</label><div class="input-wrap"><input class="input" id="confirmPassword" type="password" name="confirmPassword" required autocomplete="new-password" /><button type="button" class="btn btn-ghost btn-icon toggle" data-toggle-password aria-label="Show password" aria-pressed="false"><i data-icon="eye" data-size="18"></i></button></div></div>
+            <div><button type="submit" class="btn btn-primary">Update password</button></div>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="../js/icons.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/components.js"></script>
+<script src="../js/profile.js"></script>
+<script>initProfilePage();</script>
+</body>
+</html>
