@@ -9,8 +9,9 @@
 const API_BASE_URL = window.MEDICARE_API_BASE_URL ||
   (['localhost', '127.0.0.1'].includes(location.hostname)
     ? 'http://localhost:8080/api'
-    : 'https://YOUR-BACKEND.onrender.com/api');
+    : 'https://YOUR-REAL-SERVICE.onrender.com/api');
 
+    
 const Auth = {
   TOKEN_KEY: 'medicareai_token',
   USER_KEY: 'medicareai_user',
