@@ -6,7 +6,10 @@
    Contract with the backend is unchanged: same base URL convention, same endpoints, same
    ApiResponse envelope, same token storage keys. */
 
-const API_BASE_URL = window.MEDICARE_API_BASE_URL || 'http://localhost:8080/api';
+const API_BASE_URL = window.MEDICARE_API_BASE_URL ||
+  (['localhost', '127.0.0.1'].includes(location.hostname)
+    ? 'http://localhost:8080/api'
+    : 'https://YOUR-BACKEND.onrender.com/api');
 
 const Auth = {
   TOKEN_KEY: 'medicareai_token',
