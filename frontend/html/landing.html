@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Doctors, appointments and health guidance – MediCare AI</title>
+<meta name="description" content="MediCare AI — find a doctor, book appointments and ask general health questions in one place." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="navbar-container"></div>
+
+<main id="main">
+  <section class="px-4 md:px-6" style="background:var(--surface);border-bottom:1px solid var(--line)">
+    <div class="max-w-6xl mx-auto grid gap-10 lg:gap-14 items-center py-12 md:py-20" style="grid-template-columns:minmax(0,1fr)" id="hero-grid">
+      <style>@media(min-width:1024px){#hero-grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr)!important}}</style>
+      <div>
+        <h1 class="hero-title" style="margin:0 0 18px">See the right doctor, at a time that suits you.</h1>
+        <p class="text-muted prose-narrow" style="font-size:18px;margin:0 0 28px">Search doctors by specialty, pick an open time, and keep your appointments and records in one place. Have a general health question first? Ask the assistant.</p>
+        <div class="flex flex-wrap gap-3" id="hero-cta">
+          <a href="register.html" class="btn btn-primary btn-lg">Create an account</a>
+          <a href="login.html" class="btn btn-secondary btn-lg">Log in</a>
+        </div>
+        <p class="text-sm text-faint" style="margin:18px 0 0">Not for emergencies. If someone is in danger, call 112.</p>
+      </div>
+
+      <div class="card" style="padding:20px;max-width:460px;width:100%;justify-self:center" aria-hidden="true">
+        <p class="text-sm font-bold" style="margin:0 0 12px">Choose a date</p>
+        <div class="date-strip" style="grid-auto-columns:minmax(58px,1fr);margin-bottom:18px"><span class="date-chip" style="min-height:64px;"><span class="dow" style="">Tue</span><span class="dom">14</span></span><span class="date-chip" style="min-height:64px;"><span class="dow" style="">Wed</span><span class="dom">15</span></span><span class="date-chip" style="min-height:64px;background:var(--brand);border-color:var(--brand);color:#fff"><span class="dow" style="color:#D4EBED">Thu</span><span class="dom">16</span></span><span class="date-chip" style="min-height:64px;"><span class="dow" style="">Fri</span><span class="dom">17</span></span><span class="date-chip" style="min-height:64px;"><span class="dow" style="">Mon</span><span class="dom">18</span></span></div>
+        <p class="text-sm font-bold" style="margin:0 0 12px">Choose a time</p>
+        <div class="slot-grid" style="grid-template-columns:repeat(4,1fr)"><span class="slot" style="display:flex;align-items:center;justify-content:center;">09:00</span><span class="slot" style="display:flex;align-items:center;justify-content:center;;background:#F0F4F5;color:#9AAAB4;text-decoration:line-through;border-style:dashed">09:30</span><span class="slot" style="display:flex;align-items:center;justify-content:center;">10:00</span><span class="slot" style="display:flex;align-items:center;justify-content:center;background:var(--brand);border-color:var(--brand);color:#fff">10:30</span><span class="slot" style="display:flex;align-items:center;justify-content:center;">11:00</span><span class="slot" style="display:flex;align-items:center;justify-content:center;;background:#F0F4F5;color:#9AAAB4;text-decoration:line-through;border-style:dashed">11:30</span><span class="slot" style="display:flex;align-items:center;justify-content:center;">14:00</span><span class="slot" style="display:flex;align-items:center;justify-content:center;">14:30</span></div>
+        <div class="callout" style="margin-top:18px"><i data-icon="circle-check" data-size="18"></i><span>Your booking is confirmed only after the clinic’s system accepts it.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="px-4 md:px-6 py-14 md:py-20">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-display" style="font-size:30px;margin:0 0 8px">How booking works</h2>
+      <p class="text-muted prose-narrow" style="margin:0 0 32px">Three steps from “I need to see someone” to a confirmed appointment.</p>
+      <ol class="grid gap-5 md:grid-cols-3" style="list-style:none;padding:0;margin:0">
+        <li class="card card-pad"><span class="badge badge-brand" style="margin-bottom:12px">Step 1</span><h3 class="text-lg font-bold" style="margin:0 0 6px">Find a doctor</h3><p class="text-muted" style="margin:0">Search by name or specialty and compare experience, fees and available days.</p></li>
+        <li class="card card-pad"><span class="badge badge-brand" style="margin-bottom:12px">Step 2</span><h3 class="text-lg font-bold" style="margin:0 0 6px">Pick a date and time</h3><p class="text-muted" style="margin:0">Choose from the doctor’s working days and hours, add a note about your symptoms, and review.</p></li>
+        <li class="card card-pad"><span class="badge badge-brand" style="margin-bottom:12px">Step 3</span><h3 class="text-lg font-bold" style="margin:0 0 6px">Get confirmation</h3><p class="text-muted" style="margin:0">The doctor confirms your request and you are notified in the app. Reschedule or cancel from your appointments.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="features" class="px-4 md:px-6 py-14 md:py-20" style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-display" style="font-size:30px;margin:0 0 32px">What you can do</h2>
+      <div class="grid gap-x-12 gap-y-8 md:grid-cols-2">
+        <div class="flex gap-4">
+  <span class="state-icon" style="margin:0;flex-shrink:0"><i data-icon="stethoscope" data-size="22"></i></span>
+  <div><h3 class="text-base font-bold" style="margin:0 0 4px">Find a doctor</h3><p class="text-muted" style="margin:0">Filter by specialty and sort by experience or fee. Each profile shows qualifications, working days and hours.</p></div>
+</div>
+        <div class="flex gap-4">
+  <span class="state-icon" style="margin:0;flex-shrink:0"><i data-icon="calendar-check" data-size="22"></i></span>
+  <div><h3 class="text-base font-bold" style="margin:0 0 4px">Book and manage appointments</h3><p class="text-muted" style="margin:0">Request a time, track its status, reschedule, or cancel. Doctors accept requests and mark visits complete.</p></div>
+</div>
+        <div class="flex gap-4">
+  <span class="state-icon" style="margin:0;flex-shrink:0"><i data-icon="file-text" data-size="22"></i></span>
+  <div><h3 class="text-base font-bold" style="margin:0 0 4px">Keep records together</h3><p class="text-muted" style="margin:0">Upload reports as PDF, JPG or PNG. Doctors can add diagnoses and prescriptions to your record.</p></div>
+</div>
+        <div class="flex gap-4">
+  <span class="state-icon" style="margin:0;flex-shrink:0"><i data-icon="message-circle" data-size="22"></i></span>
+  <div><h3 class="text-base font-bold" style="margin:0 0 4px">Ask the assistant</h3><p class="text-muted" style="margin:0">Get general health information and help using the app, in plain language, any time of day.</p></div>
+</div>
+        <div class="flex gap-4">
+  <span class="state-icon" style="margin:0;flex-shrink:0"><i data-icon="bell" data-size="22"></i></span>
+  <div><h3 class="text-base font-bold" style="margin:0 0 4px">Stay informed</h3><p class="text-muted" style="margin:0">Appointment requests, confirmations and changes show up as notifications.</p></div>
+</div>
+        <div class="flex gap-4">
+  <span class="state-icon" style="margin:0;flex-shrink:0"><i data-icon="shield-check" data-size="22"></i></span>
+  <div><h3 class="text-base font-bold" style="margin:0 0 4px">Role-based access</h3><p class="text-muted" style="margin:0">Patients, doctors and administrators each see only the tools that belong to their role.</p></div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="assistant" class="px-4 md:px-6 py-14 md:py-20">
+    <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 items-start">
+      <div>
+        <h2 class="font-display" style="font-size:30px;margin:0 0 12px">An assistant that knows its limits</h2>
+        <p class="text-muted" style="margin:0 0 14px">The AI assistant helps with general health information and with using MediCare. It does not diagnose conditions, prescribe medicine, or replace a doctor.</p>
+        <p class="text-muted" style="margin:0">If you describe symptoms that could be an emergency, it tells you to call your local emergency number straight away.</p>
+      </div>
+      <div class="card card-pad" style="display:grid;gap:14px">
+        <div class="callout is-danger"><i data-icon="siren" data-size="18"></i><div><strong>Emergency?</strong> Call 112 or go to the nearest hospital. Do not wait for a reply from the assistant.</div></div>
+        <div class="callout"><i data-icon="info" data-size="18"></i><div>Avoid sharing more personal details than you need to. Your conversations are visible only to your account.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="px-4 md:px-6 py-14 md:py-20" style="background:var(--surface);border-top:1px solid var(--line)">
+    <div class="max-w-3xl mx-auto faq">
+      <h2 class="font-display" style="font-size:30px;margin:0 0 24px">Questions people ask</h2>
+      <div class="grid gap-3">
+        <details class="card" style="overflow:hidden">
+  <summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold" style="min-height:56px">How do I book an appointment?<i data-icon="chevron-down" data-size="20" class="text-faint"></i></summary>
+  <p class="px-5 pb-5 text-muted" style="margin:0">Log in, open Find a doctor, choose a doctor, then pick a date and time. You will see the request under Appointments straight away, marked Pending until the doctor confirms.</p>
+</details>
+        <details class="card" style="overflow:hidden">
+  <summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold" style="min-height:56px">Can the AI assistant replace a doctor?<i data-icon="chevron-down" data-size="20" class="text-faint"></i></summary>
+  <p class="px-5 pb-5 text-muted" style="margin:0">No. It offers general information and helps you find the right specialist. It cannot diagnose or prescribe. Always consult a licensed doctor for medical decisions.</p>
+</details>
+        <details class="card" style="overflow:hidden">
+  <summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold" style="min-height:56px">Can I reschedule or cancel?<i data-icon="chevron-down" data-size="20" class="text-faint"></i></summary>
+  <p class="px-5 pb-5 text-muted" style="margin:0">Yes. Open Appointments, pick the visit, and choose Reschedule or Cancel. Please make changes as early as you can so the slot can be offered to someone else.</p>
+</details>
+        <details class="card" style="overflow:hidden">
+  <summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold" style="min-height:56px">Is my personal and medical data safe?<i data-icon="chevron-down" data-size="20" class="text-faint"></i></summary>
+  <p class="px-5 pb-5 text-muted" style="margin:0">Your account is protected by authentication, and what you can see depends on your role. Details are used to manage your appointments and records.</p>
+</details>
+        <details class="card" style="overflow:hidden">
+  <summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold" style="min-height:56px">What should I do in a medical emergency?<i data-icon="chevron-down" data-size="20" class="text-faint"></i></summary>
+  <p class="px-5 pb-5 text-muted" style="margin:0">Do not use this platform for emergencies. Call your local emergency number (112 in India) or go to the nearest hospital immediately.</p>
+</details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="px-4 md:px-6 py-10" style="background:var(--ink);color:#C7D5DC">
+  <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
+    <div>
+      <a href="landing.html" class="brand-mark" style="color:#fff;margin-bottom:10px"><span class="brand-glyph"><i data-icon="heart-pulse" data-size="18"></i></span>MediCare AI</a>
+      <p class="text-sm" style="margin:10px 0 0;max-width:34ch">Doctors, appointments and general health guidance in one place.</p>
+    </div>
+    <nav aria-label="Footer"><p class="text-sm font-bold" style="color:#fff;margin:0 0 10px">Explore</p>
+      <ul class="grid gap-2 text-sm" style="list-style:none;padding:0;margin:0"><li><a href="landing.html#how" class="hover:underline">How it works</a></li><li><a href="login.html" class="hover:underline">Log in</a></li><li><a href="register.html" class="hover:underline">Create account</a></li></ul></nav>
+    <div><p class="text-sm font-bold" style="color:#fff;margin:0 0 10px">Contact</p>
+      <ul class="grid gap-2 text-sm" style="list-style:none;padding:0;margin:0"><li class="flex items-center gap-2"><i data-icon="mail" data-size="16"></i>support@medicareai.com</li><li class="flex items-center gap-2"><i data-icon="phone" data-size="16"></i>+1 (800) 555-0142</li></ul></div>
+  </div>
+  <p class="text-xs max-w-6xl mx-auto" style="margin:28px auto 0;padding-top:18px;border-top:1px solid #2A4656;color:#9DB2BD">© 2026 MediCare AI. General information only; not medical advice.</p>
+</footer>
+<script src="../js/icons.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/components.js"></script>
+<script>initPublicChrome();if(Auth.isLoggedIn()){document.getElementById('hero-cta').innerHTML='<a href="dashboard.html" class="btn btn-primary btn-lg">Go to dashboard</a>';}</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Access restricted – MediCare AI</title>
+<meta name="description" content="MediCare AI — find a doctor, book appointments and ask general health questions in one place." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<main id="main" class="min-h-screen flex items-center justify-center p-6">
+  <div class="card card-pad text-center" style="max-width:460px;width:100%;padding:36px 28px">
+    <div class="state-icon" style="margin:0 auto 16px;width:56px;height:56px"><i data-icon="lock" data-size="28"></i></div>
+    <p class="text-sm font-semibold text-faint" style="margin:0 0 6px">Access restricted</p>
+    <h1 class="page-title" style="font-size:26px;margin-bottom:10px">You don’t have access to this page</h1>
+    <p class="text-muted" style="margin:0 0 24px">This area is for a different type of account. If you think you should have access, contact an administrator.</p>
+    <div class="flex flex-wrap gap-2 justify-center">
+      <a href="dashboard.html" class="btn btn-primary" id="home-link">Go to dashboard</a>
+      <a href="landing.html" class="btn btn-secondary">Back to home</a>
+    </div>
+  </div>
+</main>
+<script src="../js/icons.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/components.js"></script>
+<script>if(!localStorage.getItem('medicareai_token')){document.getElementById('home-link').href='login.html';document.getElementById('home-link').textContent='Log in';}</script>
+</body>
+</html>

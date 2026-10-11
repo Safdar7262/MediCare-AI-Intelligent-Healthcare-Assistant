@@ -1,0 +1,9 @@
+backend/target/
+backend/uploads/
+backend/src/main/resources/application.yml
+backend/src/main/resources/application-*.yml
+!backend/src/main/resources/application-example.yml
+node_modules/
+.idea/
+.vscode/
+*.log

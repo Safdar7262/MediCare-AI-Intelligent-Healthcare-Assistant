@@ -1,0 +1,31 @@
+<aside class="sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="flex items-center justify-between px-4" style="height:var(--topbar-h);border-bottom:1px solid var(--line)">
+    <a href="dashboard.html" class="brand-mark" aria-label="MediCare AI home">
+      <span class="brand-glyph"><i data-icon="heart-pulse" data-size="18"></i></span>
+      <span>MediCare <span style="color:var(--brand)">AI</span></span>
+    </a>
+    <button type="button" class="btn btn-ghost btn-icon only-mobile" data-close-nav aria-label="Close menu"><i data-icon="x" data-size="20"></i></button>
+  </div>
+
+  <nav class="flex-1 overflow-y-auto px-3 py-3" aria-label="Primary">
+    <a href="dashboard.html" data-nav-link="dashboard.html" class="nav-link"><i data-icon="layout-dashboard"></i>Dashboard</a>
+    <a href="doctors.html" data-nav-link="doctors.html" data-roles="PATIENT" class="nav-link"><i data-icon="stethoscope"></i>Find a doctor</a>
+    <a href="doctors.html" data-nav-link="doctors.html" data-roles="ADMIN,DOCTOR" class="nav-link"><i data-icon="stethoscope"></i>Doctors</a>
+    <a href="appointments.html" data-nav-link="appointments.html" class="nav-link"><i data-icon="calendar-days"></i>Appointments</a>
+    <a href="patients.html" data-nav-link="patients.html" data-roles="ADMIN,DOCTOR" class="nav-link"><i data-icon="users"></i>Patients</a>
+    <a href="reports.html" data-nav-link="reports.html" class="nav-link"><i data-icon="file-text"></i>Medical records</a>
+    <a href="chatbot.html" data-nav-link="chatbot.html" class="nav-link"><i data-icon="message-circle"></i>AI assistant</a>
+
+    <p class="nav-group-label">Account</p>
+    <a href="notifications.html" data-nav-link="notifications.html" class="nav-link"><i data-icon="bell"></i>Notifications</a>
+    <a href="profile.html" data-nav-link="profile.html" class="nav-link"><i data-icon="user-round"></i>Profile &amp; settings</a>
+    <a href="admin.html" data-nav-link="admin.html" data-roles="ADMIN" class="nav-link"><i data-icon="shield-check"></i>Admin panel</a>
+  </nav>
+
+  <div class="px-3 pb-3" style="border-top:1px solid var(--line)">
+    <p class="text-xs text-muted" style="margin:12px 4px 8px">In an emergency, call <strong class="text-ink">112</strong>. This app is not for urgent care.</p>
+    <button type="button" data-logout class="nav-link w-full" style="background:none;border:0;cursor:pointer;font-family:inherit">
+      <i data-icon="log-out"></i>Log out
+    </button>
+  </div>
+</aside>

@@ -1,0 +1,33 @@
+<header class="sticky top-0 z-30" style="background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between" style="height:64px">
+    <a href="landing.html" class="brand-mark" aria-label="MediCare AI home">
+      <span class="brand-glyph"><i data-icon="heart-pulse" data-size="18"></i></span>
+      <span>MediCare <span style="color:var(--brand)">AI</span></span>
+    </a>
+
+    <nav class="md-up flex items-center gap-7 text-sm font-semibold" aria-label="Site">
+      <a href="landing.html#how" class="text-muted hover:text-ink">How it works</a>
+      <a href="landing.html#features" class="text-muted hover:text-ink">What you can do</a>
+      <a href="landing.html#assistant" class="text-muted hover:text-ink">AI assistant</a>
+      <a href="landing.html#faq" class="text-muted hover:text-ink">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="login.html" class="btn btn-ghost btn-sm sm-up">Log in</a>
+      <a href="register.html" class="btn btn-primary btn-sm sm-up">Create account</a>
+      <button type="button" class="btn btn-secondary btn-icon md-down" id="public-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="public-menu"><i data-icon="menu" data-size="20"></i></button>
+    </div>
+  </div>
+  <div id="public-menu" class="hidden md-down px-4 pb-4" style="border-top:1px solid var(--line);background:#fff">
+    <nav class="flex flex-col py-2" aria-label="Mobile site">
+      <a href="landing.html#how" class="menu-item">How it works</a>
+      <a href="landing.html#features" class="menu-item">What you can do</a>
+      <a href="landing.html#assistant" class="menu-item">AI assistant</a>
+      <a href="landing.html#faq" class="menu-item">FAQ</a>
+    </nav>
+    <div class="grid grid-cols-2 gap-2 pt-2">
+      <a href="login.html" class="btn btn-secondary">Log in</a>
+      <a href="register.html" class="btn btn-primary">Create account</a>
+    </div>
+  </div>
+</header>

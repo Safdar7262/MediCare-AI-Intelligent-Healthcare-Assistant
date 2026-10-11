@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard – MediCare AI</title>
+    <meta
+      name="description"
+      content="MediCare AI — find a doctor, book appointments and ask general health questions in one place."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="shell">
+      <div id="sidebar-container"></div>
+      <div class="shell-main">
+        <div id="topbar-container"></div>
+        <main id="main" class="page">
+          <div class="page-head">
+            <div>
+              <h1 class="page-title" id="greeting">Welcome</h1>
+              <p class="page-sub" id="greeting-sub">Loading your dashboard…</p>
+            </div>
+            <div class="flex flex-wrap gap-2" id="head-actions"></div>
+          </div>
+
+          <div
+            id="stats"
+            class="grid gap-3 md:gap-4 grid-cols-2 lg:grid-cols-4"
+            aria-busy="true"
+            aria-label="Summary"
+          >
+            <div class="skeleton" style="height: 112px"></div>
+            <div class="skeleton" style="height: 112px"></div>
+            <div class="skeleton" style="height: 112px"></div>
+            <div class="skeleton" style="height: 112px"></div>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-3" style="margin-top: 24px">
+            <div class="lg:col-span-2 grid gap-5 content-start" id="primary">
+              <div
+                class="skeleton"
+                style="height: 200px; border-radius: 12px"
+              ></div>
+              <div
+                class="skeleton"
+                style="height: 260px; border-radius: 12px"
+              ></div>
+            </div>
+            <div class="grid gap-5 content-start" id="secondary">
+              <div
+                class="skeleton"
+                style="height: 220px; border-radius: 12px"
+              ></div>
+            </div>
+          </div>
+
+          <section
+            class="faq"
+            style="margin-top: 36px"
+            aria-labelledby="help-title"
+          >
+            <h2
+              id="help-title"
+              class="text-lg font-bold"
+              style="margin: 0 0 12px"
+            >
+              Quick answers
+            </h2>
+            <div class="grid gap-3 md:grid-cols-2">
+              <details class="card">
+                <summary
+                  class="flex items-center justify-between gap-4 px-5 py-4 font-semibold"
+                >
+                  How do I book an appointment?<i
+                    data-icon="chevron-down"
+                    data-size="20"
+                    class="text-faint"
+                  ></i>
+                </summary>
+                <p class="px-5 pb-4 text-sm text-muted" style="margin: 0">
+                  Open Find a doctor, choose a doctor, then pick a date and
+                  time. Your request shows under Appointments as Pending until
+                  the doctor confirms.
+                </p>
+              </details>
+              <details class="card">
+                <summary
+                  class="flex items-center justify-between gap-4 px-5 py-4 font-semibold"
+                >
+                  Can the AI assistant replace a doctor?<i
+                    data-icon="chevron-down"
+                    data-size="20"
+                    class="text-faint"
+                  ></i>
+                </summary>
+                <p class="px-5 pb-4 text-sm text-muted" style="margin: 0">
+                  No. It gives general information and can’t diagnose or
+                  prescribe. Always consult a licensed doctor for medical
+                  decisions.
+                </p>
+              </details>
+              <details class="card">
+                <summary
+                  class="flex items-center justify-between gap-4 px-5 py-4 font-semibold"
+                >
+                  Can I reschedule or cancel?<i
+                    data-icon="chevron-down"
+                    data-size="20"
+                    class="text-faint"
+                  ></i>
+                </summary>
+                <p class="px-5 pb-4 text-sm text-muted" style="margin: 0">
+                  Yes. Go to Appointments, find the visit and choose Reschedule
+                  or Cancel. Please change plans as early as you can.
+                </p>
+              </details>
+              <details class="card">
+                <summary
+                  class="flex items-center justify-between gap-4 px-5 py-4 font-semibold"
+                >
+                  What if it’s an emergency?<i
+                    data-icon="chevron-down"
+                    data-size="20"
+                    class="text-faint"
+                  ></i>
+                </summary>
+                <p class="px-5 pb-4 text-sm text-muted" style="margin: 0">
+                  Don’t use this platform for emergencies. Call 112 in India or
+                  go to the nearest hospital immediately.
+                </p>
+              </details>
+            </div>
+          </section>
+
+          <br>
+
+          <footer
+            class="px-4 md:px-6 py-10"
+            style="background: var(--ink); color: #c7d5dc "
+          >
+            <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
+              <div>
+                <a
+                  href="landing.html"
+                  class="brand-mark"
+                  style="color: #fff; margin-bottom: 10px"
+                  ><span class="brand-glyph"
+                    ><i data-icon="heart-pulse" data-size="18"></i></span
+                  >MediCare AI</a
+                >
+                <p class="text-sm" style="margin: 10px 0 0; max-width: 34ch">
+                  Doctors, appointments and general health guidance in one
+                  place.
+                </p>
+              </div>
+              <nav aria-label="Footer">
+                <p
+                  class="text-sm font-bold"
+                  style="color: #fff; margin: 0 0 10px"
+                >
+                  Explore
+                </p>
+                <ul
+                  class="grid gap-2 text-sm"
+                  style="list-style: none; padding: 0; margin: 0"
+                >
+                  <li>
+                    <a href="landing.html#how" class="hover:underline"
+                      >How it works</a
+                    >
+                  </li>
+                  <li>
+                    <a href="login.html" class="hover:underline">Log in</a>
+                  </li>
+                  <li>
+                    <a href="register.html" class="hover:underline"
+                      >Create account</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div>
+                <p
+                  class="text-sm font-bold"
+                  style="color: #fff; margin: 0 0 10px"
+                >
+                  Contact
+                </p>
+                <ul
+                  class="grid gap-2 text-sm"
+                  style="list-style: none; padding: 0; margin: 0"
+                >
+                  <li class="flex items-center gap-2">
+                    <i data-icon="mail" data-size="16"></i
+                    >support@medicareai.com
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-icon="phone" data-size="16"></i>+1 (800) 555-0142
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p
+              class="text-xs max-w-6xl mx-auto"
+              style="
+                margin: 28px auto 0;
+                padding-top: 18px;
+                border-top: 1px solid #2a4656;
+                color: #9db2bd;
+              "
+            >
+              © 2026 MediCare AI. General information only; not medical advice.
+            </p>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/icons.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script>
+      initDashboard();
+    </script>
+  </body>
+</html>

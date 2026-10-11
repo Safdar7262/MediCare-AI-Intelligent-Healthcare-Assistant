@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Appointments – MediCare AI</title>
+<meta name="description" content="MediCare AI — find a doctor, book appointments and ask general health questions in one place." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="shell">
+  <div id="sidebar-container"></div>
+  <div class="shell-main">
+    <div id="topbar-container"></div>
+    <main id="main" class="page">
+
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Appointments</h1>
+          <p class="page-sub" id="appt-sub">Track, reschedule and manage consultations.</p>
+        </div>
+        <a href="doctors.html" data-roles="PATIENT" class="btn btn-primary"><i data-icon="calendar-plus" data-size="18"></i>Book an appointment</a>
+      </div>
+
+      <div data-roles="ADMIN" class="callout" style="margin-bottom:16px"><i data-icon="info" data-size="18"></i><span>You’re viewing the 20 most recent appointments across the platform. Status changes are made by the assigned doctor.</span></div>
+
+      <section class="card">
+        <div class="px-4 pt-2 flex flex-wrap items-center justify-between gap-3">
+          <div class="tabs" role="tablist" aria-label="Appointment status" id="appt-tabs" style="flex:1;min-width:0;border-bottom:0">
+            <button class="tab" role="tab" data-tab="upcoming" aria-selected="true">Upcoming<span class="count" id="c-upcoming">0</span></button>
+            <button class="tab" role="tab" data-tab="completed" aria-selected="false" tabindex="-1">Completed<span class="count" id="c-completed">0</span></button>
+            <button class="tab" role="tab" data-tab="cancelled" aria-selected="false" tabindex="-1">Cancelled<span class="count" id="c-cancelled">0</span></button>
+            <button class="tab" role="tab" data-tab="all" aria-selected="false" tabindex="-1">All<span class="count" id="c-all">0</span></button>
+          </div>
+          <div class="relative" style="width:100%;max-width:280px;margin-bottom:8px"><span class="input-icon-glyph"><i data-icon="search" data-size="16"></i></span>
+            <label for="appt-search" class="sr-only">Search appointments</label>
+            <input id="appt-search" type="search" class="input input-icon" style="min-height:40px" placeholder="Search by name or reason" autocomplete="off" /></div>
+        </div>
+        <hr class="divider" />
+        <div id="appt-list" aria-busy="true"></div>
+        <div id="appt-pager"></div>
+      </section>
+       <br>
+
+          <footer
+            class="px-4 md:px-6 py-10"
+            style="background: var(--ink); color: #c7d5dc "
+          >
+            <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
+              <div>
+                <a
+                  href="landing.html"
+                  class="brand-mark"
+                  style="color: #fff; margin-bottom: 10px"
+                  ><span class="brand-glyph"
+                    ><i data-icon="heart-pulse" data-size="18"></i></span
+                  >MediCare AI</a
+                >
+                <p class="text-sm" style="margin: 10px 0 0; max-width: 34ch">
+                  Doctors, appointments and general health guidance in one
+                  place.
+                </p>
+              </div>
+              <nav aria-label="Footer">
+                <p
+                  class="text-sm font-bold"
+                  style="color: #fff; margin: 0 0 10px"
+                >
+                  Explore
+                </p>
+                <ul
+                  class="grid gap-2 text-sm"
+                  style="list-style: none; padding: 0; margin: 0"
+                >
+                  <li>
+                    <a href="landing.html#how" class="hover:underline"
+                      >How it works</a
+                    >
+                  </li>
+                  <li>
+                    <a href="login.html" class="hover:underline">Log in</a>
+                  </li>
+                  <li>
+                    <a href="register.html" class="hover:underline"
+                      >Create account</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div>
+                <p
+                  class="text-sm font-bold"
+                  style="color: #fff; margin: 0 0 10px"
+                >
+                  Contact
+                </p>
+                <ul
+                  class="grid gap-2 text-sm"
+                  style="list-style: none; padding: 0; margin: 0"
+                >
+                  <li class="flex items-center gap-2">
+                    <i data-icon="mail" data-size="16"></i
+                    >support@medicareai.com
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-icon="phone" data-size="16"></i>+1 (800) 555-0142
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p
+              class="text-xs max-w-6xl mx-auto"
+              style="
+                margin: 28px auto 0;
+                padding-top: 18px;
+                border-top: 1px solid #2a4656;
+                color: #9db2bd;
+              "
+            >
+              © 2026 MediCare AI. General information only; not medical advice.
+            </p>
+          </footer>
+    </main>
+  </div>
+</div>
+
+<script src="../js/icons.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/components.js"></script>
+<script src="../js/appointments.js"></script>
+<script>initAppointmentsPage();</script>
+</body>
+</html>
